@@ -2,5 +2,10 @@
     <string name="app_name">InventoryApp</string>
     <string name="empty_view_subtitle_text">Start by adding a Product</string>
     <string name="empty_view_title_text">The Inventory is Empty</string>
-
+    <!-- Toast message in editor when new pet has failed to be inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_item_failed">Error with saving pet</string>
+    <!-- Toast message in editor when new pet has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="editor_insert_item_successful">Pet saved</string>
+    <string name="action_insert_dummy_data">Insert dummy data</string>
+    <string name="action_delete_all_entries">Delete All Items</string>
 </resources>
