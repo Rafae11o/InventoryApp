@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/list_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/primaryText" />
+
+    <!-- Product price text -->
+    <TextView
+        android:id="@+id/list_item_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:text="$"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#89000000"/>
+
+
+    <!-- Product quantity text -->
+    <TextView
+        android:id="@+id/list_item_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:paddingBottom="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/quantityText"/>
+
+</LinearLayout>
