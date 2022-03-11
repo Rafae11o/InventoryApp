@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.inventoryapp.EditorActivity">
+
+    <LinearLayout
+        style="@style/lyn_field"
+        android:paddingTop="16dp">
+
+        <!-- Product name field -->
+        <TextView
+            style="@style/EditorTitleStyle"
+            android:text="@string/name" />
+
+        <LinearLayout
+            style="@style/lyn_editor"
+            tools:ignore="RtlSymmetry">
+
+            <EditText
+                android:id="@+id/edit_product_name"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/product_name"
+                android:inputType="textCapWords" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Product quantity field -->
+    <LinearLayout style="@style/lyn_field">
+
+
+        <TextView
+            style="@style/EditorTitleStyle"
+            android:text="@string/quantity" />
+
+        <LinearLayout
+            style="@style/lyn_editor"
+            tools:ignore="RtlSymmetry">
+
+            <EditText
+                android:id="@+id/edit_product_quantity"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/quantity_hint"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Product price field -->
+    <LinearLayout style="@style/lyn_field">
+
+        <TextView
+            style="@style/EditorTitleStyle"
+            android:text="@string/price" />
+
+        <RelativeLayout
+            style="@style/lyn_editor"
+            tools:ignore="RtlSymmetry">
+
+
+            <EditText
+                android:id="@+id/edit_product_price"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/product_price"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/label_price"
+                style="@style/PriceUnitsStyle"
+                android:text="@string/dollar" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Product supplier name field -->
+    <LinearLayout style="@style/lyn_field">
+
+        <TextView
+            style="@style/EditorTitleStyle"
+            android:text="@string/supname" />
+
+        <LinearLayout
+            style="@style/lyn_editor"
+            tools:ignore="RtlSymmetry">
+
+
+            <EditText
+                android:id="@+id/edit_product_supname"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/supname_hint"
+                android:inputType="text"
+                android:lines="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Product supplier email field -->
+    <LinearLayout style="@style/lyn_field">
+
+        <TextView
+            style="@style/EditorTitleStyle"
+            android:text="@string/supmail" />
+
+        <LinearLayout
+            style="@style/lyn_editor"
+            tools:ignore="RtlSymmetry">
+
+
+            <EditText
+                android:id="@+id/edit_product_supmail"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/supmail_hint"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -31,6 +31,14 @@ public class InventoryContract {
         public static final String COLUMN_ITEM_SUPPLIER = "supplier";
 
         public static final String COLUMN_ITEM_EMAIL = "email";
+//
+//        "CREATE TABLE " + InventoryEntry.TABLE_NAME + " ("
+//                + InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+//                + InventoryEntry.COLUMN_ITEM_NAME + " TEXT NOT NULL, "
+//                + InventoryEntry.COLUMN_ITEM_QUANTITY + " INTEGER NOT NULL, "
+//                + InventoryEntry.COLUMN_ITEM_PRICE + " DOUBLE NOT NULL, "
+//                + InventoryEntry.COLUMN_ITEM_SUPPLIER + " TEXT NOT NULL, "
+//                + InventoryEntry.COLUMN_ITEM_EMAIL + " TEXT);";
 
         public static final String CONTENT_LIST_TYPE =
                 ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_INVENTORY;

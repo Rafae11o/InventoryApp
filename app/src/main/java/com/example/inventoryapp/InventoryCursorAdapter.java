@@ -1,5 +1,6 @@
 package com.example.inventoryapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ public class InventoryCursorAdapter extends CursorAdapter {
         return LayoutInflater.from(context).inflate(R.layout.list_item, viewGroup, false);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
 
@@ -33,11 +35,11 @@ public class InventoryCursorAdapter extends CursorAdapter {
         int quantityColumnIndex = cursor.getColumnIndexOrThrow(InventoryContract.InventoryEntry.COLUMN_ITEM_QUANTITY);
 
         String itemName = cursor.getString(nameColumnIndex);
-        Double itemPrice = cursor.getDouble(priceColumnIndex);
+        double itemPrice = cursor.getDouble(priceColumnIndex);
         int itemQuantity = cursor.getInt(quantityColumnIndex);
 
         nameTextView.setText(itemName);
-        priceTextView.setText(itemPrice.toString());
-        quantityTextView.setText(itemQuantity);
+        priceTextView.setText(Double.toString(itemPrice));
+        quantityTextView.setText(Integer.toString(itemQuantity));
     }
 }

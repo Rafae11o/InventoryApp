@@ -88,12 +88,10 @@ public class InventoryProvider extends ContentProvider {
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues contentValues) {
         final int match =uriMatcher.match(uri);
-        switch (match) {
-            case ITEMS:
-                return insertItem(uri, contentValues);
-            default:
-                throw new IllegalArgumentException("Insertion is not supported for " + uri);
+        if (match == ITEMS) {
+            return insertItem(uri, contentValues);
         }
+        throw new IllegalArgumentException("Insertion is not supported for " + uri);
     }
 
     private Uri insertItem(Uri uri, ContentValues values) {

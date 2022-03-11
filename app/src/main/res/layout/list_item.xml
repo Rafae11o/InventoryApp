@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -13,9 +14,10 @@
         android:paddingStart="8dp"
         android:paddingTop="8dp"
         android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@color/primaryText" />
+        android:textColor="@color/primaryText"
+        tools:ignore="RelativeOverlap,RtlHardcoded,RtlSymmetry"
+        tools:text="Product Name"/>
 
-    <!-- Product price text -->
     <TextView
         android:id="@+id/list_item_price"
         android:layout_width="match_parent"
@@ -25,10 +27,9 @@
         android:paddingTop="4dp"
         android:text="$"
         android:textAppearance="?android:textAppearanceSmall"
-        android:textColor="#89000000"/>
+        android:textColor="#89000000"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"/>
 
-
-    <!-- Product quantity text -->
     <TextView
         android:id="@+id/list_item_quantity"
         android:layout_width="match_parent"
@@ -38,6 +39,7 @@
         android:paddingStart="8dp"
         android:paddingTop="4dp"
         android:textAppearance="?android:textAppearanceSmall"
-        android:textColor="@color/quantityText"/>
+        android:textColor="@color/quantityText"
+        tools:ignore="RtlHardcoded,RtlSymmetry"/>
 
 </LinearLayout>

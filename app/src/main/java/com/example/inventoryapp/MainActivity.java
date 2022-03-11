@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.inventoryapp.data.InventoryContract;
+import com.example.inventoryapp.data.InventoryDbHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -27,10 +28,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     InventoryCursorAdapter cursorAdapter;
 
+    private InventoryDbHelper dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        dbHelper = new InventoryDbHelper(this);
 
         FloatingActionButton fab =findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
