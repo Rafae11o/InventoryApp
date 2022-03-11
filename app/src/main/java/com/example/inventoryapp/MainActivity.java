@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        dbHelper = new InventoryDbHelper(this);
-
         FloatingActionButton fab =findViewById(R.id.fab);
         fab.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, EditorActivity.class);
